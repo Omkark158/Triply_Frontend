@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Optional: Handle mobile safe area insets if needed elsewhere */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    /* Remove padding-top unless specifically needed for other fixed elements */
+  }
+}
+
+/* Remove padding-top and height adjustment from layout-main */
+.layout-main {
+  /* No padding-top or height adjustment; let sticky Header handle positioning */
+  min-height: calc(100vh - 64px); /* Optional: Ensure content fills viewport minus Header */
+} 
